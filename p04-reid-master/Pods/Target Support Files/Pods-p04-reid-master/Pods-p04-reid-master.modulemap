@@ -1,0 +1,6 @@
+framework module Pods_p04_reid_master {
+  umbrella header "Pods-p04-reid-master-umbrella.h"
+
+  export *
+  module * { export * }
+}

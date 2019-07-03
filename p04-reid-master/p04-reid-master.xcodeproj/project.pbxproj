@@ -13,9 +13,13 @@
 		B52B60BE22CD597000ED995C /* p04_reid_master.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B52B60BC22CD597000ED995C /* p04_reid_master.xcdatamodeld */; };
 		B52B60C022CD597300ED995C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52B60BF22CD597300ED995C /* Assets.xcassets */; };
 		B52B60C322CD597300ED995C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52B60C122CD597300ED995C /* LaunchScreen.storyboard */; };
+		B52B60CB22CD5CBB00ED995C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B60CA22CD5CBB00ED995C /* RoundButton.swift */; };
+		E61D3E8D8B94DBA0EDAE5CAD /* Pods_p04_reid_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3327A41229048D39CD2CE9A /* Pods_p04_reid_master.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A3327A41229048D39CD2CE9A /* Pods_p04_reid_master.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_p04_reid_master.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF46AF7E1BB804F7E984917D /* Pods-p04-reid-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-p04-reid-master.release.xcconfig"; path = "Target Support Files/Pods-p04-reid-master/Pods-p04-reid-master.release.xcconfig"; sourceTree = "<group>"; };
 		B52B60B222CD597000ED995C /* p04-reid-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "p04-reid-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52B60B522CD597000ED995C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B52B60B722CD597000ED995C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		B52B60BF22CD597300ED995C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B52B60C222CD597300ED995C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B52B60C422CD597300ED995C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B52B60CA22CD5CBB00ED995C /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		EF4D5488AC7CACBAA7A74BA3 /* Pods-p04-reid-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-p04-reid-master.debug.xcconfig"; path = "Target Support Files/Pods-p04-reid-master/Pods-p04-reid-master.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61D3E8D8B94DBA0EDAE5CAD /* Pods_p04_reid_master.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2ADC51CCCC6556F2A95150EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF4D5488AC7CACBAA7A74BA3 /* Pods-p04-reid-master.debug.xcconfig */,
+				AF46AF7E1BB804F7E984917D /* Pods-p04-reid-master.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B52B60A922CD597000ED995C = {
 			isa = PBXGroup;
 			children = (
 				B52B60B422CD597000ED995C /* p04-reid-master */,
 				B52B60B322CD597000ED995C /* Products */,
+				2ADC51CCCC6556F2A95150EB /* Pods */,
+				C2CADAD6264247AB86E78FEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +78,21 @@
 				B52B60B522CD597000ED995C /* AppDelegate.swift */,
 				B52B60B722CD597000ED995C /* ViewController.swift */,
 				B52B60B922CD597000ED995C /* Main.storyboard */,
+				B52B60CA22CD5CBB00ED995C /* RoundButton.swift */,
 				B52B60BF22CD597300ED995C /* Assets.xcassets */,
 				B52B60C122CD597300ED995C /* LaunchScreen.storyboard */,
 				B52B60C422CD597300ED995C /* Info.plist */,
 				B52B60BC22CD597000ED995C /* p04_reid_master.xcdatamodeld */,
 			);
 			path = "p04-reid-master";
+			sourceTree = "<group>";
+		};
+		C2CADAD6264247AB86E78FEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3327A41229048D39CD2CE9A /* Pods_p04_reid_master.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B52B60C722CD597300ED995C /* Build configuration list for PBXNativeTarget "p04-reid-master" */;
 			buildPhases = (
+				3118A8864FAF5D9F371D85FE /* [CP] Check Pods Manifest.lock */,
 				B52B60AE22CD597000ED995C /* Sources */,
 				B52B60AF22CD597000ED995C /* Frameworks */,
 				B52B60B022CD597000ED995C /* Resources */,
+				84DAA6943D15F297A7C31F59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +163,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3118A8864FAF5D9F371D85FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-p04-reid-master-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84DAA6943D15F297A7C31F59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-p04-reid-master/Pods-p04-reid-master-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-p04-reid-master/Pods-p04-reid-master-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B52B60AE22CD597000ED995C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B52B60B822CD597000ED995C /* ViewController.swift in Sources */,
+				B52B60CB22CD5CBB00ED995C /* RoundButton.swift in Sources */,
 				B52B60BE22CD597000ED995C /* p04_reid_master.xcdatamodeld in Sources */,
 				B52B60B622CD597000ED995C /* AppDelegate.swift in Sources */,
 			);
@@ -284,6 +362,7 @@
 		};
 		B52B60C822CD597300ED995C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF4D5488AC7CACBAA7A74BA3 /* Pods-p04-reid-master.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +381,7 @@
 		};
 		B52B60C922CD597300ED995C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF46AF7E1BB804F7E984917D /* Pods-p04-reid-master.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
