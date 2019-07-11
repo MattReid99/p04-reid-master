@@ -11,6 +11,6 @@ import Foundation
 public class Globals {
     
     static var yVals = [Double]()
-    static var multiplier : Double?
+    static var multiplier : Int = 1
     
 }

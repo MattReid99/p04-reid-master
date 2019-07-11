@@ -20,6 +20,11 @@ class GraphViewController: UIViewController {
         super.viewDidLoad()
         
         yVals = Globals.yVals
+        var index : Int = 0
+        while index < yVals.count {
+            yVals[index] = Double(Globals.multiplier) * yVals[index]
+            index += 1
+        }
 
         drawGraph()
         // Do any additional setup after loading the view.
@@ -37,16 +42,16 @@ class GraphViewController: UIViewController {
         ds1.mode = .cubicBezier
         
         ds1.drawValuesEnabled = false
-        ds1.colors = [NSUIColor.blue]
+        ds1.colors = [NSUIColor.green]
         ds1.drawCirclesEnabled = true
-        ds1.circleHoleColor = NSUIColor.init(red: 109/255, green: 176/255, blue: 198/255, alpha: 1.0)
+        ds1.circleHoleColor = NSUIColor.init(red: 148/255, green: 244/255, blue: 179/255, alpha: 1.0)
         ds1.circleRadius = 5.0
         ds1.drawCircleHoleEnabled = false
         ds1.circleColors = [NSUIColor.white]
         ds1.lineWidth = 3.0
         ds1.drawHorizontalHighlightIndicatorEnabled = false
         
-        let colorGradient = [UIColor.init(red: 109/255, green: 176/255, blue: 198/255, alpha: 1.0).cgColor, UIColor.init(red: 62/255, green: 126/255, blue: 213/255, alpha: 0.6).cgColor] as CFArray
+        let colorGradient = [UIColor.init(red: 148/255, green: 244/255, blue: 179/255, alpha: 1.0).cgColor, UIColor.init(red: 151/255, green: 205/255, blue: 184/255, alpha: 0.6).cgColor] as CFArray
         let colorLocations : [CGFloat] = [1.0, 0.0]
         let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: colorGradient, locations: colorLocations)
         ds1.fill =  Fill.fillWithLinearGradient(gradient!, angle: 90.0)

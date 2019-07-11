@@ -29,7 +29,6 @@ class AddDataViewController: UIViewController {
     
     var sineValues = [Double]()
     var linearValues = [Double]()
-    var scriptValues = [Double]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +36,8 @@ class AddDataViewController: UIViewController {
         sineValues = [0, 1, 0, -1]
         linearValues = [2, 4, 6, 8]
         
-        buttons = [sineFunc, linear, script]
-        images = [img1, img2, img3]
+        buttons = [sineFunc, linear]
+        images = [img1, img2]
         
         for elem in images {
             elem.isHidden = true
@@ -53,22 +52,64 @@ class AddDataViewController: UIViewController {
     }
     
     @IBAction func sinePressed(_ sender: UIButton) {
-        Globals.yVals = self.sineValues
-    }
-    
-    @IBAction func linearPressed(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func scriptPressed(_ sender: UIButton) {
         for elem in images {
             elem.isHidden = true
         }
         img1.isHidden = false
-        
+        Globals.yVals = self.sineValues
     }
     
-    @IBAction func donePressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func linearPressed(_ sender: UIButton) {
+        for elem in images {
+            elem.isHidden = true
+        }
+        img2.isHidden = false
+        Globals.yVals = self.linearValues
     }
+    
+
+    
+    
+    @IBAction func donePressed(_ sender: UIButton) {
+        
+        let Url = String(format: "https://github.com/profmadden/http-example/blob/master/php/double.php")
+        guard let serviceUrl = URL(string: Url) else { return }
+        let parameterDictionary = ["value" : Int(sliderView.value)]
+        
+        
+        var request = URLRequest(url: serviceUrl)
+        request.httpMethod = "POST"
+        request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
+        
+        
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameterDictionary, options: []) else {
+            return
+        }
+        request.httpBody = httpBody
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                    
+                    if let dictionary = json as? [String: Any] {
+                        if let number = dictionary["value"] as? Double {
+                            Globals.multiplier = Int(number)
+                            self.dismiss(animated: true, completion: nil)
+                            }
+                        }
+                    } catch {
+                    print(error)
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                }
+            }.resume()
+        }
+
 }
+

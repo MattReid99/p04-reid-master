@@ -17,7 +17,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+        self.tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,7 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = "[\(indexPath.row)] = \(Globals.yVals[indexPath.row])"
+        cell.textLabel?.text = "[\(indexPath.row)] = (\(Globals.yVals[indexPath.row])*\(Globals.multiplier)) = \(Globals.yVals[indexPath.row] * Double(Globals.multiplier))"
         return cell
     }
     

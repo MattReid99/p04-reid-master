@@ -26,6 +26,9 @@
                                 <state key="normal" title="View graph">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="UH4-ap-aIe" kind="show" id="wa3-mP-qbA"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Nr-Mn-jb5">
                                 <rect key="frame" x="0.0" y="99" width="375" height="485"/>
@@ -46,7 +49,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="viewGraphPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2F-ed-Iin"/>
                                     <segue destination="igW-dM-Bz1" kind="show" id="cgE-i6-B3l"/>
                                 </connections>
                             </button>
@@ -111,10 +113,6 @@
                                 <rect key="frame" x="49" y="246" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-ok-filled-100.png" translatesAutoresizingMaskIntoConstraints="NO" id="LMc-fS-8Hi">
-                                <rect key="frame" x="49" y="346" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sinusoidal function" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOG-Ft-PKw">
                                 <rect key="frame" x="105" y="146" width="218" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -124,13 +122,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Y = mX + b" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWE-11-3Yi">
                                 <rect key="frame" x="105" y="246" width="218" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="php script" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eW-hk-bBr">
-                                <rect key="frame" x="105" y="346" width="218" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,16 +138,6 @@
                                 <connections>
                                     <action selector="donePressed:" destination="igW-dM-Bz1" eventType="touchUpInside" id="qnf-7O-hOw"/>
                                     <action selector="viewGraphPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKq-D5-2as"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4x-ZI-hlW">
-                                <rect key="frame" x="48" y="346" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="icons8-circle-100.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="viewGraphPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wyH-7A-ivJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehh-yb-bLb">
@@ -181,7 +162,7 @@
                                     <action selector="viewGraphPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g2R-hj-G8W"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-5" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="mCT-2i-Gjw">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-5" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="mCT-2i-Gjw">
                                 <rect key="frame" x="30" y="493" width="277" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="0.58039215690000001" green="0.95686274510000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -203,9 +184,7 @@
                     <connections>
                         <outlet property="img1" destination="dul-LZ-Jc8" id="sRM-UY-aWK"/>
                         <outlet property="img2" destination="thz-0Y-Lq7" id="s3P-zh-mVA"/>
-                        <outlet property="img3" destination="LMc-fS-8Hi" id="ZQb-eh-i91"/>
                         <outlet property="linear" destination="ehh-yb-bLb" id="vDM-7T-TMi"/>
-                        <outlet property="script" destination="E4x-ZI-hlW" id="wgd-0B-d8f"/>
                         <outlet property="sineFunc" destination="jF0-fl-tzf" id="dBF-iz-fDL"/>
                         <outlet property="sliderView" destination="mCT-2i-Gjw" id="9kK-lN-oj6"/>
                         <outlet property="txtField" destination="EjC-lH-2bJ" id="GAV-SC-nbA"/>
