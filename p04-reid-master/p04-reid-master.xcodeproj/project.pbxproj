@@ -14,6 +14,12 @@
 		B52B60C022CD597300ED995C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52B60BF22CD597300ED995C /* Assets.xcassets */; };
 		B52B60C322CD597300ED995C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52B60C122CD597300ED995C /* LaunchScreen.storyboard */; };
 		B52B60CB22CD5CBB00ED995C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B60CA22CD5CBB00ED995C /* RoundButton.swift */; };
+		B52B60CE22CD605300ED995C /* icons8-circle-100.png in Resources */ = {isa = PBXBuildFile; fileRef = B52B60CD22CD605300ED995C /* icons8-circle-100.png */; };
+		B52B60D022CD653100ED995C /* icons8-ok-filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = B52B60CF22CD653100ED995C /* icons8-ok-filled-100.png */; };
+		B52B60D222CD70BF00ED995C /* backArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B52B60D122CD70BF00ED995C /* backArrow.png */; };
+		B52B60F522D6D97300ED995C /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B60F422D6D97200ED995C /* GraphViewController.swift */; };
+		B52B60F722D6DB5C00ED995C /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B60F622D6DB5C00ED995C /* Globals.swift */; };
+		B52B60F922D6DF9600ED995C /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B60F822D6DF9600ED995C /* AddDataViewController.swift */; };
 		E61D3E8D8B94DBA0EDAE5CAD /* Pods_p04_reid_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3327A41229048D39CD2CE9A /* Pods_p04_reid_master.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +35,12 @@
 		B52B60C222CD597300ED995C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B52B60C422CD597300ED995C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B52B60CA22CD5CBB00ED995C /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		B52B60CD22CD605300ED995C /* icons8-circle-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-circle-100.png"; path = "../../../../../../Downloads/icons8-circle-100.png"; sourceTree = "<group>"; };
+		B52B60CF22CD653100ED995C /* icons8-ok-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-ok-filled-100.png"; path = "../../../../../Supportr/Venture/icons8-ok-filled-100.png"; sourceTree = "<group>"; };
+		B52B60D122CD70BF00ED995C /* backArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backArrow.png; path = ../../../../../Supportr/Venture/backArrow.png; sourceTree = "<group>"; };
+		B52B60F422D6D97200ED995C /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		B52B60F622D6DB5C00ED995C /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		B52B60F822D6DF9600ED995C /* AddDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataViewController.swift; sourceTree = "<group>"; };
 		EF4D5488AC7CACBAA7A74BA3 /* Pods-p04-reid-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-p04-reid-master.debug.xcconfig"; path = "Target Support Files/Pods-p04-reid-master/Pods-p04-reid-master.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +62,6 @@
 				EF4D5488AC7CACBAA7A74BA3 /* Pods-p04-reid-master.debug.xcconfig */,
 				AF46AF7E1BB804F7E984917D /* Pods-p04-reid-master.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,6 +86,7 @@
 		B52B60B422CD597000ED995C /* p04-reid-master */ = {
 			isa = PBXGroup;
 			children = (
+				B52B60CC22CD5FBB00ED995C /* images */,
 				B52B60B522CD597000ED995C /* AppDelegate.swift */,
 				B52B60B722CD597000ED995C /* ViewController.swift */,
 				B52B60B922CD597000ED995C /* Main.storyboard */,
@@ -83,8 +95,21 @@
 				B52B60C122CD597300ED995C /* LaunchScreen.storyboard */,
 				B52B60C422CD597300ED995C /* Info.plist */,
 				B52B60BC22CD597000ED995C /* p04_reid_master.xcdatamodeld */,
+				B52B60F422D6D97200ED995C /* GraphViewController.swift */,
+				B52B60F622D6DB5C00ED995C /* Globals.swift */,
+				B52B60F822D6DF9600ED995C /* AddDataViewController.swift */,
 			);
 			path = "p04-reid-master";
+			sourceTree = "<group>";
+		};
+		B52B60CC22CD5FBB00ED995C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B52B60D122CD70BF00ED995C /* backArrow.png */,
+				B52B60CF22CD653100ED995C /* icons8-ok-filled-100.png */,
+				B52B60CD22CD605300ED995C /* icons8-circle-100.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		C2CADAD6264247AB86E78FEB /* Frameworks */ = {
@@ -155,7 +180,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52B60D222CD70BF00ED995C /* backArrow.png in Resources */,
 				B52B60C322CD597300ED995C /* LaunchScreen.storyboard in Resources */,
+				B52B60CE22CD605300ED995C /* icons8-circle-100.png in Resources */,
+				B52B60D022CD653100ED995C /* icons8-ok-filled-100.png in Resources */,
 				B52B60C022CD597300ED995C /* Assets.xcassets in Resources */,
 				B52B60BB22CD597000ED995C /* Main.storyboard in Resources */,
 			);
@@ -216,7 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B52B60B822CD597000ED995C /* ViewController.swift in Sources */,
+				B52B60F522D6D97300ED995C /* GraphViewController.swift in Sources */,
+				B52B60F722D6DB5C00ED995C /* Globals.swift in Sources */,
 				B52B60CB22CD5CBB00ED995C /* RoundButton.swift in Sources */,
+				B52B60F922D6DF9600ED995C /* AddDataViewController.swift in Sources */,
 				B52B60BE22CD597000ED995C /* p04_reid_master.xcdatamodeld in Sources */,
 				B52B60B622CD597000ED995C /* AppDelegate.swift in Sources */,
 			);

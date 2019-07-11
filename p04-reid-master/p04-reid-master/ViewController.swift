@@ -8,17 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Globals.yVals.count
+    }
     
-
-    @IBAction func viewGraphPressed(_ sender: UIButton) {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = "[\(indexPath.row)] = \(Globals.yVals[indexPath.row])"
+        return cell
     }
     
 }
